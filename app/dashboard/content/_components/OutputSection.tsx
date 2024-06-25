@@ -1,11 +1,18 @@
 import { Button } from "@/components/ui/button";
+import { ContentResultProps } from "@/types";
 import "@toast-ui/editor/dist/toastui-editor.css";
 import { Editor } from "@toast-ui/react-editor";
 import { Copy } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
-export default function OutputSection() {
+export default function OutputSection({ contentResult }: ContentResultProps) {
   const editorRef: any = useRef<Editor>();
+
+  useEffect(() => {
+    const editorInstance = editorRef.current?.getInstance();
+    editorInstance?.setMarkdown(contentResult);
+  }, [contentResult]);
+
   return (
     <div className="bg-white shadow-lg border rounded-lg">
       <div className="flex justify-between items-center p-5">

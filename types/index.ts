@@ -22,4 +22,9 @@ export type TemplateSlugProps = {
 export type SelectedTemplateProps = {
   selectedTemplate?: TemplateProps;
   userFormInput: any;
+  isLoading: boolean;
+};
+
+export type ContentResultProps = {
+  contentResult: string;
 };

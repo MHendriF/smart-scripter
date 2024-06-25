@@ -45,9 +45,10 @@ export const Templates = [
   {
     name: "Blog Topic Ideas",
     desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
-    category: "",
+    category: "Blog",
     icon: "https://cdn-icons-png.flaticon.com/128/11497/11497847.png",
-    aiPrompt: "",
+    aiPrompt:
+      "Generate top 5 blog topic ideas in bullet only, (no description) based on niche in rich text editor format",
     slug: "blog-topic-idea",
     form: [
       {
@@ -61,9 +62,9 @@ export const Templates = [
   {
     name: "Youtube SEO Title",
     desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
-    category: "",
+    category: "Youtube",
     icon: "https://cdn-icons-png.flaticon.com/128/402/402075.png",
-    aiPrompt: "",
+    aiPrompt: "Give me best SEO optimized high ranked 5 title ",
     slug: "youtube-seo-title",
     form: [
       {
@@ -82,9 +83,9 @@ export const Templates = [
   {
     name: "Youtube Description",
     desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
-    category: "",
+    category: "Youtube",
     icon: "https://cdn-icons-png.flaticon.com/128/2111/2111748.png",
-    aiPrompt: "",
+    aiPrompt: "Generate youtube description with emoji under outline",
     slug: "youtube-description",
     form: [
       {
@@ -103,7 +104,7 @@ export const Templates = [
   {
     name: "Youtube Tags",
     desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
-    category: "",
+    category: "Youtube",
     icon: "https://cdn-icons-png.flaticon.com/128/4674/4674918.png",
     aiPrompt: "",
     slug: "youtube-tag",
@@ -124,15 +125,16 @@ export const Templates = [
   {
     name: "Rewrite Article (Plagiarism Free)",
     desc: "Use this tool to rewrite existing Article or Blog Post which can bypass AI detectors and also make it plagiarism free.",
-    category: "",
+    category: "Rewriting Tool",
     icon: "https://cdn-icons-png.flaticon.com/128/3131/3131607.png",
-    aiPrompt: "",
+    aiPrompt: "Rewrite give article without any Plagiarism",
     slug: "rewrite-article",
     form: [
       {
-        label: "🤖 Provide your Article/Blogpost or any other content to rewrite.",
+        label: "🤖 Provide your Article/Blog post or any other content to rewrite.",
         field: "textarea",
         name: "article",
+        required: true,
       },
     ],
   },
@@ -147,29 +149,31 @@ export const Templates = [
       {
         label: "Enter text that you want to re-write or improve",
         field: "textarea",
-        name: "article",
+        name: "textToImprove",
+        required: true,
       },
     ],
   },
   {
-    name: "Add Emojis to Text",
+    name: "Add Emoji to Text",
     desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
-    category: "",
+    category: "Blog",
     icon: "https://cdn-icons-png.flaticon.com/128/2584/2584606.png",
-    aiPrompt: "",
+    aiPrompt: "Add emoji to outline text depends on outline",
     slug: "add-emoji-to-text",
     form: [
       {
         label: "Enter your text to add emojis",
         field: "textarea",
-        name: "emoji",
+        name: "outline",
+        required: true,
       },
     ],
   },
   {
     name: "Instagram Post Generator",
     desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
-    category: "",
+    category: "Instagram",
     icon: "https://cdn-icons-png.flaticon.com/128/15713/15713420.png",
     aiPrompt: "",
     slug: "instagram-post-generator",
@@ -185,9 +189,9 @@ export const Templates = [
   {
     name: "Instagram Hash Tag Generator",
     desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
-    category: "",
+    category: "Instagram",
     icon: "https://cdn-icons-png.flaticon.com/128/7045/7045432.png",
-    aiPrompt: "",
+    aiPrompt: "Generate 15 Instagram hash tag depends on a given keyword",
     slug: "instagram-hash-tag-generator",
     form: [
       {
@@ -201,7 +205,7 @@ export const Templates = [
   {
     name: "Instagram Post/Reel Idea",
     desc: "An AI tool that generate New and trending instagram idea depends on your niche",
-    category: "",
+    category: "Instagram",
     icon: "https://cdn-icons-png.flaticon.com/128/1029/1029183.png",
     aiPrompt: "",
     slug: "instagram-post-idea-generator",
@@ -233,7 +237,7 @@ export const Templates = [
   {
     name: "Write Code",
     desc: "AI Model to generate programming code in any language",
-    category: "",
+    category: "Code",
     icon: "https://cdn-icons-png.flaticon.com/128/6062/6062646.png",
     aiPrompt: "",
     slug: "write-code",
@@ -242,13 +246,14 @@ export const Templates = [
         label: "Enter description of code you want along with Programming Lang",
         field: "textarea",
         name: "description",
+        required: true,
       },
     ],
   },
   {
     name: "Explain Code",
     desc: "AI Model to explain programming code in any language",
-    category: "",
+    category: "Code",
     icon: "https://cdn-icons-png.flaticon.com/128/8488/8488751.png",
     aiPrompt: "",
     slug: "explain-code",
@@ -257,13 +262,14 @@ export const Templates = [
         label: "Enter code which you want to understand",
         field: "textarea",
         name: "article",
+        required: true,
       },
     ],
   },
   {
     name: "Code Bug Detector",
     desc: "This tool analyzes your input, like error messages and code snippets, to pinpoint and fix bugs, offering detailed solutions and alternatives in a straightforward, user-friendly way.",
-    category: "",
+    category: "Code",
     icon: "https://cdn-icons-png.flaticon.com/128/4426/4426267.png",
     aiPrompt: "",
     slug: "code-bug-detector",
@@ -272,6 +278,7 @@ export const Templates = [
         label: "Enter code which you want to test bug",
         field: "textarea",
         name: "code",
+        required: true,
       },
     ],
   },

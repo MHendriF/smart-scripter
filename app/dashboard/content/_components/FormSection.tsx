@@ -3,21 +3,22 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { SelectedTemplateProps } from "@/types";
+import { Loader2Icon } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 
-export default function FormSection({ selectedTemplate, userFormInput }: SelectedTemplateProps) {
+export default function FormSection({ selectedTemplate, userFormInput, isLoading }: SelectedTemplateProps) {
   const [formData, setFormData] = useState<any>();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
+    userFormInput(formData);
   };
 
   const handleInputChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    userFormInput(formData);
   };
 
   return (
@@ -39,7 +40,10 @@ export default function FormSection({ selectedTemplate, userFormInput }: Selecte
             ) : null}
           </div>
         ))}
-        <Button className="w-full py-6">Generate Content</Button>
+        <Button className="w-full py-6" disabled={isLoading}>
+          {isLoading && <Loader2Icon className="w-4 h-4 animate-spin" />}
+          Generate Content
+        </Button>
       </form>
     </div>
   );
