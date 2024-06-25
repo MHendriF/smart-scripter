@@ -14,12 +14,10 @@ export default function SideNav() {
   ];
 
   const pathname = usePathname();
-  useEffect(() => {
-    console.log(pathname);
-  }, [pathname]);
+  useEffect(() => {}, [pathname]);
 
   return (
-    <div className="h-screen p-5 shadow-sm border">
+    <div className="h-screen p-5 shadow-sm border bg-white">
       <div className="flex justify-center">
         <Image src="/logo.svg" width={70} height={70} alt="logo" />
       </div>

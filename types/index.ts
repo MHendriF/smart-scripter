@@ -12,3 +12,14 @@ export type TemplateProps = {
     required?: boolean;
   }[];
 };
+
+export type TemplateSlugProps = {
+  params: {
+    "template-slug": string;
+  };
+};
+
+export type SelectedTemplateProps = {
+  selectedTemplate?: TemplateProps;
+  userFormInput: any;
+};
