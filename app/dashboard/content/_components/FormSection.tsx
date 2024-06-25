@@ -14,7 +14,7 @@ export default function FormSection({ selectedTemplate, userFormInput }: Selecte
     console.log(formData);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
     userFormInput(formData);
@@ -29,7 +29,7 @@ export default function FormSection({ selectedTemplate, userFormInput }: Selecte
       <form className="mt-6" onSubmit={handleSubmit}>
         {selectedTemplate?.form?.map((item) => (
           <div className="flex flex-col my-3 gap-2 mb-7" key={item.name}>
-            <label htmlFor={item.name} className="text-primary font-medium">
+            <label htmlFor={item.name} className="text-gray-600 font-medium">
               {item.label}
             </label>
             {item.field === "input" ? (

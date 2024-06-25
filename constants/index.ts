@@ -3,7 +3,7 @@ export const Templates = [
     name: "Blog Title",
     desc: "An AI tool that generate blog title depends on your blog information",
     category: "Blog",
-    icon: "https://cdn-icons-png.flaticon.com/128/6114/6114045.png",
+    icon: "https://cdn-icons-png.flaticon.com/128/4186/4186534.png",
     aiPrompt:
       "Give me 5 blog topic in bullet wise only based on give niche & outline topic and give me result in Rich text editor format",
     slug: "generate-blog-title",
@@ -48,7 +48,7 @@ export const Templates = [
     category: "",
     icon: "https://cdn-icons-png.flaticon.com/128/11497/11497847.png",
     aiPrompt: "",
-    slug: "generate-blog-topic",
+    slug: "blog-topic-idea",
     form: [
       {
         label: "Enter your blog niche",
@@ -64,7 +64,7 @@ export const Templates = [
     category: "",
     icon: "https://cdn-icons-png.flaticon.com/128/402/402075.png",
     aiPrompt: "",
-    slug: "generate-youtube-seo",
+    slug: "youtube-seo-title",
     form: [
       {
         label: "Enter your youtube video topic keywords",
@@ -85,7 +85,7 @@ export const Templates = [
     category: "",
     icon: "https://cdn-icons-png.flaticon.com/128/2111/2111748.png",
     aiPrompt: "",
-    slug: "generate-youtube-description",
+    slug: "youtube-description",
     form: [
       {
         label: "Enter your blog topic/title",
@@ -106,7 +106,7 @@ export const Templates = [
     category: "",
     icon: "https://cdn-icons-png.flaticon.com/128/4674/4674918.png",
     aiPrompt: "",
-    slug: "generate-youtube-tags",
+    slug: "youtube-tag",
     form: [
       {
         label: "Enter your youtube title",
@@ -127,7 +127,7 @@ export const Templates = [
     category: "",
     icon: "https://cdn-icons-png.flaticon.com/128/3131/3131607.png",
     aiPrompt: "",
-    slug: "generate-article-free",
+    slug: "rewrite-article",
     form: [
       {
         label: "🤖 Provide your Article/Blogpost or any other content to rewrite.",
@@ -142,7 +142,7 @@ export const Templates = [
     category: "",
     icon: "https://cdn-icons-png.flaticon.com/128/1686/1686815.png",
     aiPrompt: "",
-    slug: "generate-text-improver",
+    slug: "text-improver",
     form: [
       {
         label: "Enter text that you want to re-write or improve",
@@ -157,7 +157,7 @@ export const Templates = [
     category: "",
     icon: "https://cdn-icons-png.flaticon.com/128/2584/2584606.png",
     aiPrompt: "",
-    slug: "generate-emoji-text",
+    slug: "add-emoji-to-text",
     form: [
       {
         label: "Enter your text to add emojis",
@@ -172,7 +172,7 @@ export const Templates = [
     category: "",
     icon: "https://cdn-icons-png.flaticon.com/128/15713/15713420.png",
     aiPrompt: "",
-    slug: "generate-instagram-post",
+    slug: "instagram-post-generator",
     form: [
       {
         label: "Enter Keywords for your post",
@@ -188,7 +188,7 @@ export const Templates = [
     category: "",
     icon: "https://cdn-icons-png.flaticon.com/128/7045/7045432.png",
     aiPrompt: "",
-    slug: "generate-istagram-hastag",
+    slug: "instagram-hash-tag-generator",
     form: [
       {
         label: "Enter Keywords for your instagram hastag",
@@ -204,7 +204,7 @@ export const Templates = [
     category: "",
     icon: "https://cdn-icons-png.flaticon.com/128/1029/1029183.png",
     aiPrompt: "",
-    slug: "generate-instagram-idea",
+    slug: "instagram-post-idea-generator",
     form: [
       {
         label: "Enter Keywords / Niche for your instagram idea",
@@ -215,15 +215,15 @@ export const Templates = [
     ],
   },
   {
-    name: "English Grammer Check",
-    desc: "AI Model to Correct your english grammer by providing the text",
+    name: "English Grammar Check",
+    desc: "AI Model to Correct your english grammar by providing the text",
     category: "",
     icon: "https://cdn-icons-png.flaticon.com/128/12596/12596700.png",
     aiPrompt: "",
-    slug: "grammar-check",
+    slug: "english-grammar-checker",
     form: [
       {
-        label: "Enter text to correct the grammer",
+        label: "Enter text to correct the grammar",
         field: "input",
         name: "sentence",
         required: true,
@@ -236,7 +236,7 @@ export const Templates = [
     category: "",
     icon: "https://cdn-icons-png.flaticon.com/128/6062/6062646.png",
     aiPrompt: "",
-    slug: "generate-code",
+    slug: "write-code",
     form: [
       {
         label: "Enter description of code you want along with Programming Lang",
@@ -281,7 +281,7 @@ export const Templates = [
     category: "",
     icon: "https://cdn-icons-png.flaticon.com/128/2178/2178616.png",
     aiPrompt: "",
-    slug: "generate-tagline",
+    slug: "tagline-generator",
     form: [
       {
         label: "Product/Brand Name",
@@ -302,7 +302,7 @@ export const Templates = [
     category: "",
     icon: "https://cdn-icons-png.flaticon.com/128/679/679922.png",
     aiPrompt: "",
-    slug: "generate-product-description",
+    slug: "product-description",
     form: [
       {
         label: "Product Name",
