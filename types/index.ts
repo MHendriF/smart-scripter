@@ -28,3 +28,12 @@ export type SelectedTemplateProps = {
 export type ContentResultProps = {
   contentResult: string;
 };
+
+export type HistoryProps = {
+  id: number;
+  formData: string;
+  templateSlug: string;
+  aiResponse: string;
+  createdBy: string;
+  createdAt: string;
+};

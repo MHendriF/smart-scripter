@@ -1,12 +1,14 @@
 "use client";
 
-import { Templates } from "@/constants";
+import { Templates, limitCredits } from "@/constants";
+import { TotalUsageContext } from "@/providers/TotalUsageContext";
 import { TemplateProps, TemplateSlugProps } from "@/types";
 import { useUser } from "@clerk/nextjs";
 import { ArrowLeft } from "lucide-react";
 import moment from "moment";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import React, { useContext, useState } from "react";
 
 import { chatSession } from "@/utils/GeminiAI";
 import { db } from "@/utils/db";
@@ -19,13 +21,19 @@ import { Button } from "@/components/ui/button";
 export default function CreateNewContent(props: TemplateSlugProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [contentResult, setContentResult] = useState<string>("");
+  const { totalUsage, setTotalUsage } = useContext(TotalUsageContext);
   const { user } = useUser();
+  const router = useRouter();
 
   const selectedTemplate: TemplateProps | undefined = Templates?.find(
     (item) => item.slug === props.params["template-slug"],
   );
 
   const generateAIContent = async (formData: any) => {
+    if (totalUsage >= limitCredits) {
+      router.push("/dashboard/billing");
+      return;
+    }
     setIsLoading(true);
     const selectedPrompt = selectedTemplate?.aiPrompt;
     const prompt = JSON.stringify(formData) + ", " + selectedPrompt;

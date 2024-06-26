@@ -1,5 +1,6 @@
 "use client";
 
+import UsageTrack from "./UsageTrack";
 import { FileLock, Home, Settings, WalletCards } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -17,7 +18,7 @@ export default function SideNav() {
   useEffect(() => {}, [pathname]);
 
   return (
-    <div className="h-screen p-5 shadow-sm border bg-white">
+    <div className="h-screen relative p-5 shadow-sm border bg-white">
       <div className="flex justify-center">
         <Image src="/logo.svg" width={70} height={70} alt="logo" />
       </div>
@@ -27,12 +28,14 @@ export default function SideNav() {
           <div
             className={`flex gap-2 mb-2 p-3 hover:bg-primary hover:text-white rounded-lg cursor-pointer items-center
                 ${pathname == menu.path && "bg-primary text-white"} `}
-            key={menu.name}
-          >
+            key={menu.name}>
             <menu.icon className="h-6 w-6" />
             <h2 className="text-lg">{menu.name}</h2>
           </div>
         ))}
+      </div>
+      <div className="absolute bottom-10 left-0 w-full">
+        <UsageTrack />
       </div>
     </div>
   );

@@ -325,3 +325,5 @@ export const Templates = [
     ],
   },
 ];
+
+export const limitCredits = 10000;
