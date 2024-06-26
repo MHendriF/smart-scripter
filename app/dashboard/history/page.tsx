@@ -17,7 +17,7 @@ async function HistoryPage() {
   const HistoryList: HistoryProps[] = await db
     .select()
     .from(AIOutput)
-    .where(eq(AIOutput?.createdBy, user?.primaryEmailAddress?.emailAddress))
+    .where(eq(AIOutput?.createdBy, user?.primaryEmailAddress?.emailAddress || ""))
     .orderBy(desc(AIOutput.id));
 
   const getTemplateName = (slug: string) => {

@@ -1,11 +1,13 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+
 import { SelectedTemplateProps } from "@/types";
 import { Loader2Icon } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function FormSection({ selectedTemplate, userFormInput, isLoading }: SelectedTemplateProps) {
   const [formData, setFormData] = useState<any>();
@@ -23,7 +25,7 @@ export default function FormSection({ selectedTemplate, userFormInput, isLoading
 
   return (
     <div className="p-5 shadow-md border rounded-lg bg-white">
-      <Image src={selectedTemplate?.icon} alt={selectedTemplate?.name} width={70} height={70} />
+      <Image src={selectedTemplate?.icon!} alt={selectedTemplate?.name!} width={70} height={70} />
       <h2 className="font-bold text-2xl text-primary">{selectedTemplate?.name}</h2>
       <p className="text-gray-500 text-sm">{selectedTemplate?.desc}</p>
 
