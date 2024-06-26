@@ -1,9 +1,30 @@
 import { planData } from "@/constants";
+import { useUser } from "@clerk/nextjs";
+import moment from "moment";
 import React from "react";
+
+import { db } from "@/utils/db";
+import { UserSubscription } from "@/utils/schema";
 
 import PlanItemCard from "./_components/PlanItemCard";
 
 export default function BillingPage() {
+  const { user } = useUser();
+
+  const handleSubscription = async () => {
+    const result = await db.insert(UserSubscription).values({
+      email: user?.primaryEmailAddress?.emailAddress,
+      username: user?.fullName,
+      active: true,
+      paymentId: "1",
+      joinDate: moment().format("DD/MM/yyyy"),
+    });
+    console.log("🚀 ~ file: page.tsx:handleSubscription ~ result:", result);
+    if (result) {
+      window.location.reload();
+    }
+  };
+
   return (
     <div className="p-10">
       <h2 className="font-bold text-3xl text-center">Upgrade</h2>
