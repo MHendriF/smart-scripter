@@ -1,3 +1,12 @@
+import { FileLock, Home, Settings, WalletCards } from "lucide-react";
+
+export const navbarList = [
+  { name: "Home", path: "/dashboard", icon: Home },
+  { name: "History", path: "/dashboard/history", icon: FileLock },
+  { name: "Billing", path: "/dashboard/billing", icon: WalletCards },
+  { name: "Setting", path: "/dashboard/setting", icon: Settings },
+];
+
 export const Templates = [
   {
     name: "Blog Title",
