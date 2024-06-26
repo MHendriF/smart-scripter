@@ -4,7 +4,7 @@ export const navbarList = [
   { name: "Home", path: "/dashboard", icon: Home },
   { name: "History", path: "/dashboard/history", icon: FileLock },
   { name: "Billing", path: "/dashboard/billing", icon: WalletCards },
-  { name: "Setting", path: "/dashboard/setting", icon: Settings },
+  { name: "Settings", path: "/dashboard/settings", icon: Settings },
 ];
 
 export const Templates = [
