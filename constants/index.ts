@@ -336,3 +336,47 @@ export const Templates = [
 ];
 
 export const limitCredits = 10000;
+
+export const planData = [
+  {
+    id: 1,
+    name: "Free",
+    cost: 0,
+    isActive: true,
+    offering: [
+      {
+        value: "✔️ 10,000 Words/Month",
+      },
+      {
+        value: "✔️ 50+ Content Templates",
+      },
+      {
+        value: "✔️ Unlimited Download & Copy",
+      },
+      {
+        value: "✔️ 1 Month of History",
+      },
+    ],
+  },
+  {
+    id: 1,
+    name: "Monthly",
+    cost: 9.99,
+    paymentLink: "https://buy.stripe.com/test_28o9EjbkvgfQ8VOeUV",
+    isActive: false,
+    offering: [
+      {
+        value: "✔️ 1,000,000 Words/Month",
+      },
+      {
+        value: "✔️ 50+ Templates Access",
+      },
+      {
+        value: "✔️ Unlimited Download & Copy",
+      },
+      {
+        value: "✔️ 1 Year of History",
+      },
+    ],
+  },
+];
