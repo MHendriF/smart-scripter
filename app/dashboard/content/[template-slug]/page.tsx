@@ -1,32 +1,52 @@
 "use client";
+
+import { Templates } from "@/constants";
 import { TemplateProps, TemplateSlugProps } from "@/types";
+import { useUser } from "@clerk/nextjs";
+import { ArrowLeft } from "lucide-react";
+import moment from "moment";
+import Link from "next/link";
 import React, { useState } from "react";
+
+import { chatSession } from "@/utils/GeminiAI";
+import { db } from "@/utils/db";
+import { AIOutput } from "@/utils/schema";
+
 import FormSection from "../_components/FormSection";
 import OutputSection from "../_components/OutputSection";
-import { Templates } from "@/constants";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
-import { chatSession } from "@/utils/GeminiAI";
 
 export default function CreateNewContent(props: TemplateSlugProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [contentResult, setContentResult] = useState<string>("");
+  const { user } = useUser();
+
   const selectedTemplate: TemplateProps | undefined = Templates?.find(
-    (item) => item.slug === props.params["template-slug"]
+    (item) => item.slug === props.params["template-slug"],
   );
 
   const generateAIContent = async (formData: any) => {
     setIsLoading(true);
     const selectedPrompt = selectedTemplate?.aiPrompt;
-    console.log("🚀 ~ generateAIContent ~ selectedPrompt:", selectedPrompt);
-
     const prompt = JSON.stringify(formData) + ", " + selectedPrompt;
     const result = await chatSession.sendMessage(prompt);
+
     setContentResult(result?.response.text());
+    await saveToDB(JSON.stringify(formData), selectedTemplate?.slug, result?.response.text());
     console.log("🚀 ~ generateAIContent ~ result:", result);
     setIsLoading(false);
   };
+
+  const saveToDB = async (formData: any, slug: any, contentResult: string) => {
+    const result = await db.insert(AIOutput).values({
+      formData: formData,
+      templateSlug: slug,
+      aiResponse: contentResult,
+      createdBy: user?.primaryEmailAddress?.emailAddress,
+      createdAt: moment().format("DD/MM/yyyy"),
+    });
+  };
+
   return (
     <div className="p-10">
       <Link href="/dashboard">
