@@ -10,7 +10,7 @@ export const navbarList = [
 export const Templates = [
   {
     name: "Blog Title",
-    desc: "An AI tool that generate blog title depends on your blog information",
+    desc: "Generate catchy and SEO-friendly blog titles to attract readers and improve search engine rankings.",
     category: "Blog",
     icon: "https://cdn-icons-png.flaticon.com/128/4186/4186534.png",
     aiPrompt:
@@ -32,7 +32,7 @@ export const Templates = [
   },
   {
     name: "Blog Content",
-    desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
+    desc: "Create well-structured and engaging blog posts on any topic, tailored to your audience and optimized for readability.",
     category: "blog",
     icon: "https://cdn-icons-png.flaticon.com/128/4905/4905454.png",
     slug: "blog-content-generation",
@@ -53,7 +53,7 @@ export const Templates = [
   },
   {
     name: "Blog Topic Ideas",
-    desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
+    desc: "Discover fresh and relevant blog topic ideas to keep your content calendar full and your readers engaged.",
     category: "Blog",
     icon: "https://cdn-icons-png.flaticon.com/128/11497/11497847.png",
     slug: "blog-topic-idea",
@@ -70,7 +70,7 @@ export const Templates = [
   },
   {
     name: "Youtube SEO Title",
-    desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
+    desc: "Craft compelling and keyword-rich titles for your YouTube videos to boost visibility and attract more viewers.",
     category: "Youtube Tools",
     icon: "https://cdn-icons-png.flaticon.com/128/402/402075.png",
     slug: "youtube-seo-title",
@@ -92,7 +92,7 @@ export const Templates = [
   },
   {
     name: "Youtube Description",
-    desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
+    desc: "Generate informative and enticing YouTube video descriptions that include relevant keywords and links to increase viewer engagement and SEO performance.",
     category: "Youtube Tool",
     icon: "https://cdn-icons-png.flaticon.com/128/2111/2111748.png",
     slug: "youtube-description",
@@ -114,7 +114,7 @@ export const Templates = [
   },
   {
     name: "Youtube Tags",
-    desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
+    desc: "Suggest effective tags for your YouTube videos to improve discoverability and reach a broader audience.",
     category: "Youtube Tool",
     icon: "https://cdn-icons-png.flaticon.com/128/4674/4674918.png",
     slug: "youtube-tag",
@@ -138,7 +138,7 @@ export const Templates = [
 
   {
     name: "Rewrite Article (Plagiarism Free)",
-    desc: "Use this tool to rewrite existing Article or Blog Post which can bypass AI detectors and also make it plagiarism free.",
+    desc: "Rephrase existing articles to create unique, plagiarism-free content while retaining the original meaning and context.",
     icon: "https://cdn-icons-png.flaticon.com/128/3131/3131607.png",
     category: "Rewriting Tool",
     slug: "rewrite-article",
@@ -154,7 +154,7 @@ export const Templates = [
   },
   {
     name: "Text Improver",
-    desc: "This handy tool refines your writing, eliminating errors and redundancies for a clear, readable result. It also offers a comprehensive tone analysis and suggests better word choices.",
+    desc: "Enhance your text by improving clarity, coherence, and overall readability, making your writing more polished and professional.",
     icon: "https://cdn-icons-png.flaticon.com/128/1686/1686815.png",
     category: "Writing Assistant",
     slug: "text-improver",
@@ -170,7 +170,7 @@ export const Templates = [
   },
   {
     name: "Add Emojis to Text",
-    desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
+    desc: "Insert relevant emojis into your text to make your messages more expressive and engaging, suitable for social media and informal communication.",
     icon: "https://cdn-icons-png.flaticon.com/128/2584/2584606.png",
     category: "blog",
     slug: "add-emoji-to-text",
@@ -186,12 +186,12 @@ export const Templates = [
   },
   {
     name: "Instagram Post Generator",
-    desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
+    desc: "Create captivating Instagram posts with well-crafted captions that resonate with your audience and drive engagement.",
     icon: "https://cdn-icons-png.flaticon.com/128/15713/15713420.png",
     category: "blog",
 
     slug: "instagram-post-generator",
-    aiPrompt: "Generate 3 Instagram post depends on a given keywords and give output in  in rich text editor format",
+    aiPrompt: "Generate 3 Instagram post depends on a given keywords and give output in rich text editor format",
     form: [
       {
         label: "Enter Keywords for your post",
@@ -203,13 +203,12 @@ export const Templates = [
   },
   {
     name: "Instagram Hash Tag Generator",
-    desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
+    desc: "Generate relevant and trending hashtags for your Instagram posts to increase visibility and reach a wider audience.",
     icon: "https://cdn-icons-png.flaticon.com/128/7045/7045432.png",
     category: "blog",
 
     slug: "instagram-hash-tag-generator",
-    aiPrompt:
-      "Generate 15 Instagram hash tag depends on a given keywords and give output in  in rich text editor format",
+    aiPrompt: "Generate 15 Instagram hash tag depends on a given keywords and give output in rich text editor format",
     form: [
       {
         label: "Enter Keywords for your instagram has tag",
@@ -221,13 +220,13 @@ export const Templates = [
   },
   {
     name: "Instagram Post/Reel Idea",
-    desc: "An AI tool that generate New and trending instagram idea depends on your niche",
+    desc: "Get creative ideas for Instagram posts and Reels to keep your content fresh, entertaining, and aligned with current trends.",
     icon: "https://cdn-icons-png.flaticon.com/128/1029/1029183.png",
     category: "instagram",
 
     slug: "instagram-post-idea-generator",
     aiPrompt:
-      "Generate 5-10 Instagram idea depends on niche with latest trend and give output in  in rich text editor format",
+      "Generate 5-10 Instagram idea depends on niche with latest trend and give output in rich text editor format",
     form: [
       {
         label: "Enter Keywords / Niche for your instagram idea",
@@ -239,12 +238,12 @@ export const Templates = [
   },
   {
     name: "English Grammar Check",
-    desc: "AI Model to Correct your english grammar by providing the text",
+    desc: "Ensure your text is grammatically correct and free of errors, enhancing the quality and professionalism of your writing.",
     icon: "https://cdn-icons-png.flaticon.com/128/12596/12596700.png",
     category: "english",
 
     slug: "english-grammar-checker",
-    aiPrompt: "Rewrite the inputText by correcting the grammar and give output in  in rich text editor format",
+    aiPrompt: "Rewrite the inputText by correcting the grammar and give output in rich text editor format",
     form: [
       {
         label: "Enter text to correct the grammar",
@@ -256,13 +255,12 @@ export const Templates = [
   },
   {
     name: "Write Code",
-    desc: "AI Model to generate programming code in any language",
+    desc: "Generate code snippets in various programming languages based on specific requirements, saving time and effort in development.",
     icon: "https://cdn-icons-png.flaticon.com/128/6062/6062646.png",
     category: "Coding",
 
     slug: "write-code",
-    aiPrompt:
-      "Depends on user codeDescription write a code and give output in  in rich text editor format in code block ",
+    aiPrompt: "Depends on user codeDescription write a code and give output in rich text editor format in code block ",
     form: [
       {
         label: "Enter description of code you want along with Programming Lang",
@@ -274,13 +272,13 @@ export const Templates = [
   },
   {
     name: "Explain Code",
-    desc: "AI Model to explain programming code in any language",
+    desc: "Provide clear and concise explanations of code snippets, helping you understand how the code works and its functionality.",
     icon: "https://cdn-icons-png.flaticon.com/128/8488/8488751.png",
     category: "Coding",
 
     slug: "explain-code",
     aiPrompt:
-      "Depends on user codeDescription explain code line by line and give output in  in rich text editor format in code block ",
+      "Depends on user codeDescription explain code line by line and give output in rich text editor format in code block ",
     form: [
       {
         label: "Enter code which you want to understand",
@@ -292,13 +290,13 @@ export const Templates = [
   },
   {
     name: "Code Bug Detector",
-    desc: "This tool analyzes your input, like error messages and code snippets, to pinpoint and fix bugs, offering detailed solutions and alternatives in a straightforward, user-friendly way.",
+    desc: "Identify and suggest fixes for bugs in your code, streamlining the debugging process and improving code quality.",
     icon: "https://cdn-icons-png.flaticon.com/128/4426/4426267.png",
     category: "code-bug-detector",
 
     slug: "code-bug-detector",
     aiPrompt:
-      "Depends on user codeInput find bug in code and give solution and give output in  in rich text editor format in code block ",
+      "Depends on user codeInput find bug in code and give solution and give output in rich text editor format in code block ",
     form: [
       {
         label: "Enter code which you want to test bug",
@@ -310,13 +308,13 @@ export const Templates = [
   },
   {
     name: "Tagline Generator",
-    desc: "Struggling to find the perfect tagline for your brand? Let our AI-tool assist you in creating a tagline that stands out.",
+    desc: "Create memorable and impactful taglines for your brand, product, or campaign to leave a lasting impression on your audience.",
     icon: "https://cdn-icons-png.flaticon.com/128/2178/2178616.png",
     category: "Marketing",
 
     slug: "tagline-generator",
     aiPrompt:
-      "Depends on user productName and outline generate catchy 5-10 tagline for the business product and give output  in rich text editor format ",
+      "Depends on user productName and outline generate catchy 5-10 tagline for the business product and give output in rich text editor format ",
     form: [
       {
         label: "Product/Brand Name",
@@ -334,13 +332,13 @@ export const Templates = [
   },
   {
     name: "Product Description",
-    desc: "This is your AI-powered SEO expert, creating captivating and keyword-rich e-commerce product descriptions to boost your online sales.",
+    desc: "Generate detailed and persuasive product descriptions that highlight features and benefits, driving sales and customer interest.",
     icon: "https://cdn-icons-png.flaticon.com/128/679/679922.png",
     category: "Marketing",
 
     slug: "product-description",
     aiPrompt:
-      "Depends on user productName and description generate small description for product for e-commerce business give output  in rich text editor format  ",
+      "Depends on user productName and description generate small description for product for e-commerce business give output in rich text editor format  ",
     form: [
       {
         label: "Product Name",

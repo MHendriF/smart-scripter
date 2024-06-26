@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+    <h3 align="center">Smart Scripter</h3>
+   <div align="center">
+    Smart Scripter is an advanced AI-powered content generation platform designed to revolutionize the way you create written content. Harnessing the power of cutting-edge artificial intelligence technology, Smart Scripter transforms ideas into polished and engaging text with remarkable speed and accuracy. Whether you need blog posts, articles, marketing copy, or any other type of written content, Smart Scripter delivers high-quality results that meet your specific needs. Its intuitive interface and customizable features make content creation effortless, allowing you to focus on your ideas while Smart Scripter handles the writing process. Say goodbye to writer's block and hello to unparalleled creativity with Smart Scripter.
+    </div>
+</div>
 
-## Getting Started
+## 🚀 Feature
 
-First, run the development server:
+- Blog Title: Generate SEO-friendly and attention-grabbing blog titles.
+- Blog Content: Create engaging, well-structured blog posts.
+- Blog Topic Ideas: Discover fresh and relevant blog topics.
+- YouTube SEO Title: Craft compelling titles for better video visibility.
+- YouTube Description: Generate informative video descriptions with keywords.
+- YouTube Tags: Suggest effective tags to reach a wider audience.
+- Rewrite Article (Plagiarism Free): Rephrase articles to create unique content.
+- Text Improver: Enhance clarity and readability of your text.
+- Add Emojis to Text: Insert relevant emojis to make text more engaging.
+- Instagram Post Generator: Create captivating Instagram posts.
+- Instagram Hashtag Generator: Generate trending hashtags for more visibility.
+- Instagram Post/Reel Idea: Get creative ideas for posts and Reels.
+- English Grammar Check: Ensure your text is grammatically correct.
+- Write Code: Generate code snippets in various programming languages.
+- Explain Code: Provide clear explanations of code snippets.
+- Code Bug Detector: Identify and suggest fixes for code bugs.
+- Tagline Generator: Create impactful taglines for your brand or product.
+- Product Description: Generate persuasive product descriptions to drive sales.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ⚙️ Tech Stack
+
+- Next.js
+- Clerk
+- Drizzle ORM
+- Gemini AI
+- Shadcn-UI
+
+## Setup .env.local file
+
+```js
+NEXT_PUBLIC_BASE_URL=<your_server>
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<get_from_clerk>
+CLERK_SECRET_KEY=<get_from_clerk>
+NEXT_PUBLIC_CLERK_SIGN_IN_URL="/sign-in"
+NEXT_PUBLIC_CLERK_SIGN_UP_URL="/sign-up"
+
+NEXT_PUBLIC_GOOGLE_GEMINI_API_KEY=<get_from_google_ai>
+
+NEXT_PUBLIC_DRIZZLE_DB_URL=<get_from_drizzle>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```shell
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Start the app
 
-## Learn More
+```shell
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Run migration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```shell
+npm run db:push
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### View table on local development
 
-## Deploy on Vercel
+```shell
+npm run db:studio
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ❤️ Credits
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🤖 Author
+
+_M Hendri Febriansyah_
