@@ -2,6 +2,8 @@
 
 import { Templates, limitCredits } from "@/constants";
 import { TotalUsageContext } from "@/providers/TotalUsageContext";
+import { UpdateCreditUsageContext } from "@/providers/UpdateCreditUsageContext";
+import { UserSubscriptionContext } from "@/providers/UserSubscriptionContext";
 import { TemplateProps, TemplateSlugProps } from "@/types";
 import { useUser } from "@clerk/nextjs";
 import { ArrowLeft } from "lucide-react";
@@ -19,18 +21,20 @@ import OutputSection from "../_components/OutputSection";
 import { Button } from "@/components/ui/button";
 
 export default function CreateNewContent(props: TemplateSlugProps) {
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [contentResult, setContentResult] = useState<string>("");
-  const { totalUsage, setTotalUsage } = useContext(TotalUsageContext);
   const { user } = useUser();
-  const router = useRouter();
+  const { totalUsage, setTotalUsage } = useContext(TotalUsageContext);
+  const { userSubscription, setUserSubscription } = useContext(UserSubscriptionContext);
+  const { updateCreditUsage, setUpdateCreditUsage } = useContext(UpdateCreditUsageContext);
 
   const selectedTemplate: TemplateProps | undefined = Templates?.find(
     (item) => item.slug === props.params["template-slug"],
   );
 
   const generateAIContent = async (formData: any) => {
-    if (totalUsage >= limitCredits) {
+    if (totalUsage >= limitCredits && !userSubscription) {
       router.push("/dashboard/billing");
       return;
     }
@@ -43,6 +47,7 @@ export default function CreateNewContent(props: TemplateSlugProps) {
     await saveToDB(JSON.stringify(formData), selectedTemplate?.slug, result?.response.text());
     console.log("🚀 ~ generateAIContent ~ result:", result);
     setIsLoading(false);
+    setUpdateCreditUsage(Date.now());
   };
 
   const saveToDB = async (formData: any, slug: any, contentResult: string) => {

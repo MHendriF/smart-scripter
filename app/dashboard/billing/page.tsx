@@ -1,7 +1,10 @@
+"use client";
+
 import { planData } from "@/constants";
+import { UserSubscriptionContext } from "@/providers/UserSubscriptionContext";
 import { useUser } from "@clerk/nextjs";
 import moment from "moment";
-import React from "react";
+import React, { useContext } from "react";
 
 import { db } from "@/utils/db";
 import { UserSubscription } from "@/utils/schema";
@@ -10,6 +13,7 @@ import PlanItemCard from "./_components/PlanItemCard";
 
 export default function BillingPage() {
   const { user } = useUser();
+  const { userSubscription, setUserSubscription } = useContext(UserSubscriptionContext);
 
   const handleSubscription = async () => {
     const result = await db.insert(UserSubscription).values({
