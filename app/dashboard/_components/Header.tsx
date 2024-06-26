@@ -10,7 +10,7 @@ export default function Header() {
         <input type="text" placeholder="Search..." className="outline-none" />
       </div>
       <div className="flex flex-row gap-2">
-        <h2 className="bg-primary p-1 rounded-full text-xs text-white px-2">🔥Join Membership just for $5/Month</h2>
+        <h2 className="bg-primary p-1 rounded-full text-xs text-white px-2">🔥Join Membership just for $9.99/Month</h2>
         <UserButton />
       </div>
     </div>
